@@ -37,7 +37,7 @@ export class EmailService {
       const emailTemplate = await this.compile('email', user);
       await transporter.sendMail({
         from: 'Mentar Colombia <mentarcol@gmail.com>',
-        to: user.email,
+        to: user.correo,
         subject: 'Acabas de recibir tu ASESORÍA INICIAL',
         html: emailTemplate,
       });
